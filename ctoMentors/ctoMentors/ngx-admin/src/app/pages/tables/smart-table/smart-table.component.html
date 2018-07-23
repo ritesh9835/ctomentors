@@ -1,0 +1,24 @@
+<nb-card>
+  <nb-card-header>
+    Smart Tables
+  </nb-card-header>
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+<p>Table</p>
+<table class='table' *ngIf="valList">
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of valList">
+      <td>{{ emp.url }}</td>
+      <td>{{ emp.name }}</td> 
+    </tr>
+  </tbody>
+</table>
